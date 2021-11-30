@@ -1,0 +1,161 @@
+<!-- https://gasko.ru/ipotechnoe-strahovanie/ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="POST">
+        <div class="online-application container">
+
+            <h2 class="online-application__title">Ипотечное страхование</h2>
+            <div class="online-application__chois">
+                <button class="online-application__manually-btn tab-item">Заполнить вручную</button>
+                <button class="online-application__upload-btn tab-item">Загрузить документы</button>
+            </div>
+            <div class="manually tab-content">
+                <h4 class="online-application__subtitle">Укажите данные для ипотеки</h4>
+                <div class="ipoteka__question" data-width="1">
+                    <span>Что планируете застраховать</span>
+                    <label data-label for="ipoteka__question-life" data-st="0" data-check>
+                        <input type="checkbox" name="ipoteka__question-life" id="ipoteka__question-life">
+                        <span>Жизнь / Здоровье</span>
+                    </label>
+                    <label data-label for="ipoteka__question-property" data-st="0" data-check>
+                        <input type="checkbox" name="ipoteka__question-property" id="ipoteka__question-property">
+                        <span>Имущество</span>
+                    </label>
+                </div>
+                <fieldset class="online-application__fieldset-grid-4 ipoteka__content">
+                    <div class="manually__item" data-width="1/4">
+                        <input type="text" name="ipoteka__bank">
+                        <label data-label for="ipoteka__bank">
+                            <span>Банк</span>
+                        </label>
+                    </div>
+                    <div class="manually__item" data-width="1/4">
+                        <input type="text" name="ipoteka__remains">
+                        <label data-label for="ipoteka__remains">
+                            <span>Остаток кредита</span>
+                        </label>
+                    </div>
+                    <div class="manually__item" data-width="1/4">
+                        <div class="online-application__input">
+                            <input type="text" name="ipoteka__gender">
+                            <label data-label for="ipoteka__gender">
+                                <span>Пол</span>
+                            </label>
+                        </div>
+                        <div class="online-application__input-option block_hidden">
+                            <span>Мужской</span>
+                            <span>Женский</span>
+                        </div>
+                    </div>
+                    <div class="manually__item" data-width="1/4">
+                        <input type="text" placeholder="ДД.ММ.ГГГГ" class="data-date" name="ipoteka__date">
+                        <label data-label for="ipoteka__date">
+                            <span>Дата рождения</span>
+                        </label>
+                        <span></span>
+                    </div>
+                    <div class="manually__item" data-width="2">
+                        <input type="text" name="ipoteka__name">
+                        <label data-label for="ipoteka__name">
+                            <span>ФИО</span>
+                        </label>
+                    </div>
+                    <div class="manually__item" data-width="2">
+                        <input type="text" name="ipoteka__tel">
+                        <label data-label for="ipoteka__tel">
+                            <span>Телефон</span>
+                        </label>
+                    </div>
+                    <label class="ipoteka__watsapp-last" for="ipoteka__watsapp">
+                        <input type="checkbox" name="ipoteka__watsapp" id="ipoteka__watsapp">
+                        <span>Получить предложение в WhatsApp</span>
+                    </label>
+                </fieldset>
+            </div>
+            <div class="upload tab-content">
+                <h4 class="online-application__subtitle">Загрузите документы для более быстрого оформления</h4>
+                <fieldset class="online-application__fieldset-grid-4 ipoteka__content">
+                    <div class="manually__item" data-width="1">
+                        <div class="ipoteka__upload-pts">
+                            <input type="file" id="upload__ipoteka-pts" name="upload__ipoteka-pts">
+                            <label data-label for="upload__ipoteka-pts" data-upload>
+                                <span>Паспорт транспортного средства</span>
+                                <div class="upload__svg-wrap">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="8" width="2" height="18" fill="#FBDD37" />
+                                        <rect x="18" y="8" width="2" height="18" transform="rotate(90 18 8)"
+                                            fill="#FBDD37" />
+                                    </svg>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="ipoteka__question" data-width="1">
+                        <span>Что планируете застраховать</span>
+                        <label data-label for="ipoteka__question-life" data-st="0" data-check>
+                            <input type="checkbox" name="ipoteka__question-life" id="ipoteka__question-life">
+                            <span>Жизнь / Здоровье</span>
+                        </label>
+                        <label data-label for="ipoteka__question-property" data-st="0" data-check>
+                            <input type="checkbox" name="ipoteka__question-property" id="ipoteka__question-property">
+                            <span>Имущество</span>
+                        </label>
+                    </div>
+                    <div class="manually__item" data-width="2">
+                        <input type="text" name="ipoteka__bank">
+                        <label data-label for="ipoteka__bank">
+                            <span>Банк</span>
+                        </label>
+                    </div>
+                    <div class="manually__item" data-width="2">
+                        <input type="text" name="ipoteka__remains">
+                        <label data-label for="ipoteka__remains">
+                            <span>Остаток кредита</span>
+                        </label>
+                    </div>
+
+                    <div class="manually__item" data-width="2">
+                        <input type="text" name="ipoteka__name">
+                        <label data-label for="ipoteka__name">
+                            <span>ФИО</span>
+                        </label>
+                    </div>
+                    <div class="manually__item" data-width="2">
+                        <input type="text" name="ipoteka__tel">
+                        <label data-label for="ipoteka__tel">
+                            <span>Телефон</span>
+                        </label>
+                    </div>
+                    <label data-label class="ipoteka__upload-watsapp-last" for="ipoteka__watsapp" data-st="0"
+                        data-check>
+                        <input type="checkbox" name="ipoteka__watsapp" id="ipoteka__upload-watsapp">
+                        <span>Получить предложение в WhatsApp</span>
+                    </label>
+                </fieldset>
+            </div>
+
+            <button class="online-application__btn">Отправить</button>
+            <p class="online-application__approval">
+                Нажимая на кнопку «Получить предложение», я соглашаюсь <a href="https://gasko.ru/policy/">условиями
+                    обработки персональных данных</a>
+            </p>
+        </div>
+
+    </form>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

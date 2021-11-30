@@ -1,0 +1,489 @@
+<!-- https://gasko.ru/diagnosticheskaya-karta-tehosmotra-dlya-osago/ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Gasko</title>
+</head>
+
+<body>
+    <form action="POST">
+        <div class="online-application container-kasko">
+            <h2 class="online-application__title">Онлайн заявка</h2>
+            <div class="online-application__chois">
+                <button class="online-application__manually-btn tab-item">Заполнить вручную</button>
+                <button class="online-application__upload-btn tab-item">Загрузить документы</button>
+            </div>
+            <div class="manually tab-content">
+                <h4 class="online-application__subtitle">Укажите информацию об авто</h4>
+                <fieldset class="online-application__fieldset-grid">
+                    <div class="manually__item" data-width="1/3">
+                        <div class="online-application__input">
+                            <input type="text" name="manually__document">
+                            <label data-label for="manually__document">
+                                <span>Документ на авто</span>
+                            </label>
+                        </div>
+                        <div class="online-application__input-option block_hidden">
+                            <span>ПТС</span>
+                            <span>СТС</span>
+                        </div>
+                    </div>
+                    <div class="manually__item" data-width="1/3">
+                        <input type="text" name="manually__series">
+                        <label data-label for="manually__series">
+                            <span>Серия и номер ПТС / СТС</span>
+                        </label>
+                    </div>
+                    <div class="manually__item" data-width="1/3">
+                        <input type="text" name="manually__whom">
+                        <label data-label for="manually__whom">
+                            <span>Кем выдано СТС / ПТС</span>
+                        </label>
+                    </div>
+                    <div class=" manually__item" data-width="1/3">
+                        <input type="text" name="manually__date-issue" class="data-date" placeholder="ДД.ММ.ГГГГ">
+                        <label data-label for="manually__date-issue">
+                            <span>Дата выдачи</span>
+                        </label>
+                        <span></span>
+                    </div>
+                    <div class="manually__item" data-width="1/3">
+                        <input type="text" name="manually__plate-number">
+                        <label data-label for="manually__plate-number">
+                            <span>Регистрационный знак</span>
+                        </label>
+                    </div>
+                    <div class="manually__item" data-width="1/3">
+                        <input type="text" name="manually__vin">
+                        <label data-label for="manually__vin">
+                            <span>VIN</span>
+                        </label>
+                    </div>
+                    <div class="manually__body-wrapper" data-width="1/2">
+                        <div class="manually__item" data-width="1/2">
+                            <input type="text" name="manually__body">
+                            <label data-label for="manually__body">
+                                <span>Кузов, №</span>
+                            </label>
+                        </div>
+                        <div class="manually__choice">
+                            <label data-label for="manually__body-like-vin1" data-width="1/2" data-st="0" data-radio>
+                                <input type="radio" name="manually__body-like-vin" id="manually__body-like-vin1"
+                                    value="Совпадает с VIN" checked>
+                                <span>Совпадает с VIN</span>
+                            </label>
+                            <label data-label for="manually__body-like-vin2" data-width="1/2" data-st="0" data-radio>
+                                <input type="radio" name="manually__body-like-vin" id="manually__body-like-vin2"
+                                    value="Отсутствует">
+                                <span>Отсутствует</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="manually__chassis-wrapper" data-width="1/2">
+                        <div class="manually__item" data-width="1/2">
+                            <input type="text" name="manually__chassis">
+                            <label data-label for="manually__chassis">
+                                <span>Шасси, №</span>
+                            </label>
+                        </div>
+                        <div class="manually__choice">
+                            <label data-label for="manually__chassis-like-vin1" data-width="1/2" data-st="0" data-radio>
+                                <input type="radio" name="manually__chassis-like-vin" id="manually__chassis-like-vin1"
+                                    value="Совпадает с VIN" checked>
+                                <span>Совпадает с VIN</span>
+                            </label>
+                            <label data-label for="manually__chassis-like-vin2" data-width="1/2" data-st="0" data-radio>
+                                <input type="radio" name="manually__chassis-like-vin" id="manually__chassis-like-vin2"
+                                    value="Отсутствует">
+                                <span>Отсутствует</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="manually__item" data-width="1/3">
+                        <input type="text" data-date placeholder="ДД.ММ.ГГГГ" name="manually__year">
+                        <label data-label for="manually__year">
+                            <span>Год выпуска</span>
+                        </label>
+                        <span></span>
+                    </div>
+                    <div class="manually__item" data-width="1/3">
+                        <input type="text" name="manually__weight-without-load">
+                        <label data-label for="manually__weight-without-load">
+                            <span>Масса без нагрузки, кг</span>
+                        </label>
+                    </div>
+                    <div class="manually__item" data-width="1/3">
+                        <input type="text" name="manually__weight-max">
+                        <label data-label for="manually__weight-max">
+                            <span>Разрешенная макс. масса, кг</span>
+                        </label>
+                    </div>
+                    <div class="manually__item" data-width="1/3">
+                        <input type="text" name="manually__power">
+                        <label data-label for="manually__power">
+                            <span>Мощность двигателя, л.с.</span>
+                        </label>
+                    </div>
+                    <div class="manually__item" data-width="1/3">
+                        <div class="online-application__input">
+                            <input type="text" name="manually__document">
+                            <label data-label for="manually__document">
+                                <span>Тип топлива</span>
+                            </label>
+                        </div>
+                        <div class="online-application__input-option block_hidden">
+                            <span>Бензин</span>
+                            <span>Дизельное топливо</span>
+                        </div>
+                    </div>
+                    <div class="manually__item" data-width="1/3">
+                        <input type="text" name="manually__mileage">
+                        <label data-label for="manually__mileage">
+                            <span>Пробег (примерный)</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <button class="manually__btn-add online-application__btn-add">Добавить ОСАГО со скидкой до 55%
+                    <span>?</span></button>
+                <div class="online-application__add">
+                    <div class="manually__wrap-add-date-issue online-application__fieldset-grid">
+                        <div class="manually__data manually__item-date " data-width="1/3">
+                            <input type="text" data-date placeholder="ДД.ММ.ГГГГ" name="manually__add-date-issue">
+                            <label data-label for="manually__date-issue">
+                                <span>Дата выдачи</span>
+                            </label>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="manually__add-item">
+                        <div class="manually__add-title-owner">Данные собственника ТС</div>
+                        <fieldset class="online-application__fieldset-grid">
+                            <div class="manually__item" data-width="1/3">
+                                <input type="text" name="manually__add-owner-passport" data-width="1/3">
+                                <label data-label for="manually__add-owner-passport">
+                                    <span>Серия и номер паспорта</span>
+                                </label>
+                            </div>
+                            <div class="manually__item" data-width="1/3">
+                                <input type="text" name="manually__add-owner-whom">
+                                <label data-label for="manually__add-owner-whom">
+                                    <span>Кем выдан</span>
+                                </label>
+                            </div>
+                            <div class="manually__item" data-width="1/3">
+                                <input type="text" data-date placeholder="ДД.ММ.ГГГГ" name="manually__add-owner-date">
+                                <label data-label for="manually__add-owner-date">
+                                    <span>Дата выдачи</span>
+                                </label>
+                                <span></span>
+                            </div>
+                            <div class="manually__item" data-width="1/3">
+                                <input type="text" data-date placeholder="ДД.ММ.ГГГГ" name="manually__add-owner-birth">
+                                <label data-label for="manually__add-owner-birth">
+                                    <span>Дата рождения</span>
+                                </label>
+                                <span></span>
+                            </div>
+                            <div class="manually__item" data-width="2/3">
+                                <input type="text" name="manually__add-owner-address">
+                                <label data-label for="manually__add-owner-address">
+                                    <span>Адрес прописки</span>
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <details class="manually__add-item">
+                        <summary class="manually__add-title-owner manually__add-title-owner-different">Добавить данные
+                            страхователя (если страхователь и
+                            собственник
+                            разные)</summary>
+                        <div class="manually__add-driver-wrap">
+                            <span class="manually__add-subtitle-driver">Водитель 1</span>
+                            <label data-label for="manually__add-matches" data-st="0" data-check>
+                                <input type="checkbox" name="manually__add-matches" id="manually__add-matches">
+                                <span>Совпадает с собственником</span>
+                            </label>
+                            <label data-label for="manually__add-restrictions" data-st="0" data-check>
+                                <input type="checkbox" name="manually__add-restrictions"
+                                    id="manually__add-restrictions">
+                                <span>Без ограничений</span>
+                            </label>
+                        </div>
+                        <div class="manually__add-driver-1">
+                            <fieldset class="manually__add-fieldset online-application__fieldset-grid">
+                                <div class="manually__item" data-width="1/2">
+                                    <input type="text" name="manually__add-driver1-name">
+                                    <label data-label for="manually__add-driver1-name">
+                                        <span>ФИО</span>
+                                    </label>
+                                </div>
+                                <div class="manually__item" data-width="1/2">
+                                    <input type="text" data-date placeholder="ДД.ММ.ГГГГ"
+                                        name="manually__add-driver1-birth">
+                                    <label data-label for="manually__add-driver1-birth">
+                                        <span>Дата рождения</span>
+                                    </label>
+                                    <span></span>
+                                </div>
+                                <div class="manually__item" data-width="1/2">
+                                    <input type="text" name="manually__add-driver1-license">
+                                    <label data-label for="manually__add-driver1-license">
+                                        <span>Серия и номер прав</span>
+                                    </label>
+                                </div>
+                                <div class="manually__item" data-width="1/2">
+                                    <input type="text" data-date placeholder="ДД.ММ.ГГГГ"
+                                        name="manually__add-driver1-beginning">
+                                    <label data-label for="manually__add-driver1-beginning">
+                                        <span>Дата начала стажа</span>
+                                    </label>
+                                    <span></span>
+                                </div>
+                            </fieldset>
+                            <button class="manually__add-driver-btn online-application__add-driver-btn"
+                                data-btn-add>Добавить
+                                водителя</button>
+                        </div>
+                        <div class="manually__add-driver-2 block_hidden">
+                            <span class="manually__add-subtitle-driver">Водитель 2</span>
+                            <fieldset class="manually__add-fieldset online-application__fieldset-grid">
+                                <div class="manually__item" data-width="1/2">
+                                    <input type="text" name="manually__add-driver1-name">
+                                    <label data-label for="manually__add-driver1-name">
+                                        <span>ФИО</span>
+                                    </label>
+                                </div>
+                                <div class="manually__item" data-width="1/2">
+                                    <input type="text" data-date placeholder="ДД.ММ.ГГГГ"
+                                        name="manually__add-driver1-birth">
+                                    <label data-label for="manually__add-driver1-birth">
+                                        <span>Дата рождения</span>
+                                    </label>
+                                    <span></span>
+                                </div>
+                                <div class="manually__item" data-width="1/2">
+                                    <input type="text" name="manually__add-driver1-license">
+                                    <label data-label for="manually__add-driver1-license">
+                                        <span>Серия и номер прав</span>
+                                    </label>
+                                </div>
+                                <div class="manually__item" data-width="1/2">
+                                    <input type="text" data-date placeholder="ДД.ММ.ГГГГ"
+                                        name="manually__add-driver1-beginning">
+                                    <label data-label for="manually__add-driver1-beginning">
+                                        <span>Дата начала стажа</span>
+                                    </label>
+                                    <span></span>
+                                </div>
+                            </fieldset>
+                            <button class="manually__add-driver-btn online-application__add-driver-btn"
+                                data-btn-add>Добавить
+                                водителя</button>
+                        </div>
+                        <div class="manually__add-driver-3 block_hidden">
+                            <span class="manually__add-subtitle-driver">Водитель 3</span>
+                            <fieldset class="manually__add-fieldset online-application__fieldset-grid">
+                                <div class="manually__item" data-width="1/2">
+                                    <input type="text" name="manually__add-driver1-name">
+                                    <label data-label for="manually__add-driver1-name">
+                                        <span>ФИО</span>
+                                    </label>
+                                </div>
+                                <div class="manually__item" data-width="1/2">
+                                    <input type="text" data-date placeholder="ДД.ММ.ГГГГ"
+                                        name="manually__add-driver1-birth">
+                                    <label data-label for="manually__add-driver1-birth">
+                                        <span>Дата рождения</span>
+                                    </label>
+                                    <span></span>
+                                </div>
+                                <div class="manually__item" data-width="1/2">
+                                    <input type="text" name="manually__add-driver1-license">
+                                    <label data-label for="manually__add-driver1-license">
+                                        <span>Серия и номер прав</span>
+                                    </label>
+                                </div>
+                                <div class="manually__item" data-width="1/2">
+                                    <input type="text" data-date placeholder="ДД.ММ.ГГГГ"
+                                        name="manually__add-driver1-beginning">
+                                    <label data-label for="manually__add-driver1-beginning">
+                                        <span>Дата начала стажа</span>
+                                    </label>
+                                    <span></span>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <div class="upload tab-content">
+                <h4 class="upload__title">Загрузите документы для более быстрого оформления</h4>
+                <fieldset class="online-application__fieldset-grid">
+                    <div class="manually__item" data-width="1">
+                        <div class="upload__load-foto">
+                            <input type="file" id="upload__pts1" name="upload__pts1">
+                            <label data-label for="upload__pts1" data-upload>
+                                <span>Фото ПТС / СТС (1 сторона)</span>
+                                <div class="upload__svg-wrap">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="8" width="2" height="18" fill="#FBDD37" />
+                                        <rect x="18" y="8" width="2" height="18" transform="rotate(90 18 8)"
+                                            fill="#FBDD37" />
+                                    </svg>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="manually__item" data-width="1">
+                        <input type="file" name="upload__pts2" id="upload__pts2">
+                        <label data-label for="upload__pts2" data-upload>
+                            <span>Фото ПТС / СТС (2 сторона)</span>
+                            <div class="upload__svg-wrap">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="8" width="2" height="18" fill="#FBDD37" />
+                                    <rect x="18" y="8" width="2" height="18" transform="rotate(90 18 8)"
+                                        fill="#FBDD37" />
+                                </svg>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="manually__item" data-width="1/3">
+                        <input type="text" name="upload__mileage">
+                        <label data-label for="upload__mileage">
+                            <span>Пробег</span>
+                        </label>
+                    </div>
+                    <div class="manually__item" data-width="1/3">
+                        <input type="text" name="upload__tire">
+                        <label data-label for="upload__tire">
+                            <span>Марка резины</span>
+                        </label>
+                    </div>
+                    <div class="manually__item" data-width="1/3">
+                        <div class="online-application__input">
+                            <input type="text" name="manually__document">
+                            <label data-label for="manually__document">
+                                <span>Вид топлива</span>
+                            </label>
+                        </div>
+                        <div class="online-application__input-option block_hidden">
+                            <span>Бензин</span>
+                            <span>Дизельное топливо</span>
+                        </div>
+                    </div>
+                </fieldset>
+                <button class="upload__btn-add online-application__btn-add">Добавить ОСАГО со скидкой до 55%
+                    <span>?</span></button>
+                <fieldset class="online-application__fieldset-grid upload__add">
+                    <div class="manually__item" data-width="1">
+                        <input type="file" id="upload__passport1" name="upload__passport1">
+                        <label data-label for="upload__passport1" data-upload>
+                            <span>Паспорт владельца (1 страница)</span>
+                            <div class="upload__svg-wrap">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="8" width="2" height="18" fill="#FBDD37" />
+                                    <rect x="18" y="8" width="2" height="18" transform="rotate(90 18 8)"
+                                        fill="#FBDD37" />
+                                </svg>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="manually__item" data-width="1">
+                        <input type="file" id="upload__passport2" name="upload__passport2">
+                        <label data-label for="upload__passport2" data-upload>
+                            <span>Паспорт владельца (прописка)</span>
+                            <div class="upload__svg-wrap">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="8" width="2" height="18" fill="#FBDD37" />
+                                    <rect x="18" y="8" width="2" height="18" transform="rotate(90 18 8)"
+                                        fill="#FBDD37" />
+                                </svg>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="manually__item" data-width="1">
+                        <input type="file" id="upload__passport-ts" name="upload__passport-ts">
+                        <label data-label for="upload__passport-ts" data-upload>
+                            <p>Паспорт транспортного средства<span>?</span></p>
+                            <div class="upload__svg-wrap">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="8" width="2" height="18" fill="#FBDD37" />
+                                    <rect x="18" y="8" width="2" height="18" transform="rotate(90 18 8)"
+                                        fill="#FBDD37" />
+                                </svg>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="manually__item" data-width="1/2">
+                        <input type="file" id="upload__rights1" name="upload__rights1">
+                        <label data-label for="upload__rights1" data-upload>
+                            <p>Водительское удостоверение сторона 1</p>
+                            <div class="upload__svg-wrap">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="8" width="2" height="18" fill="#FBDD37" />
+                                    <rect x="18" y="8" width="2" height="18" transform="rotate(90 18 8)"
+                                        fill="#FBDD37" />
+                                </svg>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="manually__item" data-width="1/2">
+                        <input type="file" id="upload__rights2" name="upload__rights2">
+                        <label data-label for="upload__rights2" data-upload>
+                            <p>Водительское удостоверение сторона 2</p>
+                            <div class="upload__svg-wrap">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="8" width="2" height="18" fill="#FBDD37" />
+                                    <rect x="18" y="8" width="2" height="18" transform="rotate(90 18 8)"
+                                        fill="#FBDD37" />
+                                </svg>
+                            </div>
+                        </label>
+                    </div>
+                    <button class="online-application__add-driver-btn upload__driver-btn" data-width="1">Добавить
+                        водителя</button>
+                </fieldset>
+            </div>
+            <div class="online-application__data-owner online-application__fieldset-grid">
+                <div class="manually__item" data-width="1/2">
+                    <input type="text" name="data-owner__owner">
+                    <label data-label for="data-owner__owner">
+                        <span>ФИО собственника</span>
+                    </label>
+                </div>
+                <div class="manually__item" data-width="1/2">
+                    <input type="text" name="data-owner__owner-tel">
+                    <label data-label for="data-owner__owner-tel">
+                        <span>Телефон</span>
+                    </label>
+                </div>
+            </div>
+            <button class="online-application__btn">Отправить</button>
+            <p class="online-application__approval">
+                Нажимая на кнопку «Получить предложение», я соглашаюсь <a href="https://gasko.ru/policy/">условиями
+                    обработки персональных данных</a>
+            </p>
+        </div>
+
+    </form>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+<!-- техосмотр: https://gasko.ru/diagnosticheskaya-karta-tehosmotra-dlya-osago/
+
+Ипотека: https://gasko.ru/ipotechnoe-strahovanie/
+
+КАСКО: https://gasko.ru/kasko/ -->

@@ -1,0 +1,79 @@
+<!-- https://gasko.ru/kasko/ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>КАСКО</title>
+</head>
+
+<body>
+    <form action="POST">
+        <div class="online-application container-kasko">
+            <h2 class="online-application__title">Онлайн заявка</h2>
+            <h4 class="online-application__subtitle">Укажите информацию об авто</h4>
+            <fieldset class="online-application__fieldset-grid kasko__content">
+                <div class="kasko__question" data-width="1">
+                    <span>Страховались ли Вы ранее</span>
+                    <label data-label for="kasko__question-yes" data-st="0" data-check>
+                        <input type="checkbox" name="kasko__question-yes" id="kasko__question-yes">
+                        <span>Да</span>
+                    </label>
+                    <label data-label for="kasko__question-no" data-st="0" data-check>
+                        <input type="checkbox" name="kasko__question-no" id="kasko__question-no">
+                        <span>Нет</span>
+                    </label>
+                </div>
+                <div class="manually__item" data-width="1/2">
+                    <input type="text" name="kasko__number">
+                    <label data-label for="kasko__number">
+                        <span>Регистрационный номер</span>
+                    </label>
+                </div>
+                <div class="manually__item" data-width="1/2">
+                    <input type="text" name="kasko__model">
+                    <label data-label for="kasko__model">
+                        <span>Марка и модель</span>
+                    </label>
+                </div>
+                <div class="manually__item" data-width="1/2">
+                    <input type="text" data-date placeholder="ДД.ММ.ГГГГ" name="kasko__date">
+                    <label data-label for="kasko__date">
+                        <span>Год выпуска</span>
+                    </label>
+                    <span></span>
+                </div>
+                <div class="manually__item" data-width="1/2">
+                    <input type="text" name="kasko__price">
+                    <label data-label for="kasko__price">
+                        <span>Стоимость автомобиля</span>
+                    </label>
+                </div>
+                <div class="manually__item" data-width="1/2">
+                    <input type="text" name="kasko__fio">
+                    <label data-label for="kasko__fio">
+                        <span>ФИО собственника</span>
+                    </label>
+                </div>
+                <div class="manually__item" data-width="1/2">
+                    <input type="text" name="kasko__tel">
+                    <label data-label for="kasko__tel">
+                        <span>Телефон</span>
+                    </label>
+                </div>
+            </fieldset>
+            <button class="online-application__btn">Отправить</button>
+            <p class="online-application__approval">
+                Нажимая на кнопку «Получить предложение», я соглашаюсь <a href="https://gasko.ru/policy/">условиями
+                    обработки персональных данных</a>
+            </p>
+        </div>
+
+    </form>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
